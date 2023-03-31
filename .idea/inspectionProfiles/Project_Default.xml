@@ -1,0 +1,29 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="6">
+            <item index="0" class="java.lang.String" itemvalue="Deprecated" />
+            <item index="1" class="java.lang.String" itemvalue="pytest-cov" />
+            <item index="2" class="java.lang.String" itemvalue="lxml" />
+            <item index="3" class="java.lang.String" itemvalue="bcrypt" />
+            <item index="4" class="java.lang.String" itemvalue="selenium" />
+            <item index="5" class="java.lang.String" itemvalue="Appium-Python-Client" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="tests.mobile.test_login.OnBoardScreen" />
+          <option value="tests.mobile.test_login.LoginScreen" />
+          <option value="tests.mobile.test_login.HomeScreen" />
+          <option value="tests.mobile.earn_more.test_earn_more_challenge_basic_flow.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
