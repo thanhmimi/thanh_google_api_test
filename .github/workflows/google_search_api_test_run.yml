@@ -31,26 +31,13 @@ jobs:
         run: |
           pytest -s -v --junit-xml=funnelbeam_report.xml
 
-      - name: Step 6 - Upload Test Results
+      - name: Step 6 - Publish Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v2
         if: always()
-        uses: actions/upload-artifact@v2
         with:
-          name: Test Results
-          path: funnelbeam_report.xml
+          files: |
+            test-results/**/*.xml
+            test-results/**/*.trx
+            test-results/**/*.json
 
-  publish-test-results:
-    name: "Publish Tests Results"
-    needs: Google_API
-    runs-on: ubuntu-latest
-    if: always()
 
-    steps:
-      - name: Download Artifacts
-        uses: actions/download-artifact@v2
-        with:
-          path: artifacts
-
-      - name: Publish Test Results
-        uses: EnricoMi/publish-unit-test-result-action@v1
-        with:
-          files: artifacts/**/*.xml
