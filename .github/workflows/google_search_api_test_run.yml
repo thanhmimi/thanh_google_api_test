@@ -31,11 +31,6 @@ jobs:
         run: |
           pytest -s -v --junit-xml=funnelbeam_report.xml
 
-      - name: Step 6 - Upload Test Results
-          uses: actions/upload-artifact@v2
-          with:
-            name: Test Results
-            path: funnelbeam_report.xml
 
 publish-test-results:
     name: "Publish Tests Results"
