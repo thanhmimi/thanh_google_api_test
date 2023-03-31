@@ -32,7 +32,6 @@ jobs:
           pytest -s -v --junit-xml=funnelbeam_report.xml
 
       - name: Step 6 - Upload Test Results
-          if: always()
           uses: actions/upload-artifact@v2
           with:
             name: Test Results
